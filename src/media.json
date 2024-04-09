@@ -1,0 +1,35 @@
+{
+    "mediaItems": [
+      {
+        "type": "image",
+        "src": "../assets/images/head-1-2.png",
+        "title": "Image Title 1",
+        "description": "Description for Image 1"
+      },
+      {
+        "type": "video",
+        "src": "../assets/video/video-1.mp4",
+        "title": "Video Title 1",
+        "description": "Description for Video 1"
+      },
+      {
+        "type": "image",
+        "src": "../assets/images/head-1.png",
+        "title": "Image Title 2",
+        "description": "Description for Image 2"
+      },
+      {
+        "type": "video",
+        "src": "../assets/video/video-2.mov",
+        "title": "Video Title 2",
+        "description": "Description for Video 2"
+      },
+      {
+        "type": "image",
+        "src": "../assets/images/head-2.png",
+        "title": "Image Title 3",
+        "description": "Description for Image 3"
+      }
+    ]
+  }
+  

@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../assets/logo/logo.svg" />
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Omah Nalar</title>
+  </head>
+  <body class="h-screen overflow-x-hidden">
+    <nav
+      class="w-full flex justify-between px-6 md:px-40 py-3 items-center shadow-sm bg-white/85 z-50 fixed backdrop-blur-md"
+    >
+      <input type="checkbox" id="check" />
+      <div class="flex items-center">
+        <img class="w-10 md:w-12" src="../assets/logo/logo.svg" alt="" />
+        <!-- <p class="font-bold">Omah Nalar</p> -->
+      </div>
+      <ul class="menu flex gap-7 text-sm font-normal">
+        <li class="list-none">
+          <a
+            href="#beranda"
+            class="${isActive === 'home' ? 'active font-bold' : ''}"
+            >Beranda</a
+          >
+        </li>
+        <li class="list-none">
+          <a
+            href="#profil"
+            class="${isActive === 'profile' ? 'active font-bold' : ''}"
+            >Profil</a
+          >
+        </li>
+        <li class="list-none">
+          <a
+            href="#services"
+            class="${isActive === 'profile' ? 'active font-bold' : ''}"
+            >Services</a
+          >
+        </li>
+        <li class="list-none">
+          <a
+            href="#produk"
+            class="${isActive === 'products' ? 'active font-bold' : ''}"
+            >Produk</a
+          >
+        </li>
+        <li class="list-none">
+          <a
+            href="#contact"
+            class="${isActive === 'products' ? 'active font-bold' : ''}"
+            >Contact</a
+          >
+        </li>
+        <button
+          class="bg-primary px-6 py-3 rounded-full text-white text-sm flex lg:hidden"
+        >
+          Beli Sekarang
+        </button>
+        <label for="check" class="close-menu">
+          <i class="fa-solid fa-xmark"></i>
+        </label>
+      </ul>
+
+      <button
+        class="bg-primary px-6 py-3 rounded-full text-white text-sm hidden lg:flex"
+      >
+        Beli Sekarang
+      </button>
+      <label
+        for="check"
+        class="open-menu relative flex justify-center items-center lg:hidden"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </label>
+    </nav>
+
+    <div
+      id="beranda"
+      class="w-full h-full flex flex-col md:flex-row px-6 lg:px-20 xl:px-40 pt-20 justify-between gap-8 items-center"
+    >
+      <div class="lg:basis-2/5 order-2 md:order-1">
+        <img
+          src="../assets/props/props-1.svg"
+          class="drop-shadow-2xl w-1/2 my-3 md:my-10"
+          alt=""
+        />
+        <h1 class="title text-2xl lg:text-5xl font-bold hidden-element">
+          Memberi <span class="text-own-pink">Ruang untuk Belajar</span> Demi
+          Nalar yang Mengakar
+        </h1>
+        <h2 class="title text-sm font-medium mt-2 md:mt-5 hidden-element">
+          Ruang Edukasi Kesehatan dan Pendidikan yang Berpusat pada
+          Kebutuhan Sasaran
+        </h2>
+        <div class="flex gap-3 my-5">
+          <button
+            class="bg-primary px-6 py-2 md:py-3 rounded-full text-white text-sm drop-shadow-lg hidden-element"
+          >
+            Beli <span class="hidden md:inline-block">Sekarang</span>
+          </button>
+          <button
+            data-toggle="modal"
+            type="button"
+            class="white border px-6 py-2 md:py-3 rounded-full text-sm flex gap-2 items-center hidden-element"
+          >
+            <img src="../assets/icons/play-circle.svg" alt="" />
+            <span class="hidden md:inline-block">Lihat</span> Dokumentasi
+          </button>
+        </div>
+      </div>
+      <div class="gap-3 items-center relative max-h-56 flex order-1 md:order-2">
+        <div class="flex flex-col h-fit gap-3">
+          <img
+            class="w-24 md:w-52 flex md:hidden xl:flex"
+            src="../assets/images/head-1.png"
+            alt=""
+            onmouseover="showTooltip('tooltip1')"
+            onmouseout="hideTooltip('tooltip1')"
+          />
+          <img
+            class="w-24 md:w-52 flex md:hidden xl:flex"
+            src="../assets/images/head-1-2.png"
+            alt=""
+            onmouseover="showTooltip('tooltip2')"
+            onmouseout="hideTooltip('tooltip2')"
+          />
+        </div>
+        <img
+          class="h-1/2 md:h-fit"
+          src="../assets/images/head-2.png"
+          alt=""
+          onmouseover="showTooltip('tooltip3')"
+          onmouseout="hideTooltip('tooltip3')"
+        />
+
+        <div
+          id="tooltip1"
+          class="tooltip rounded-lg justify-center items-center hidden"
+        >
+          <img src="../assets/icons/play-circle.svg" alt="Custom Image 1" />
+          <p>Tulisan tooltip 1</p>
+        </div>
+        <div
+          id="tooltip2"
+          class="tooltip rounded-lg justify-center items-center hidden"
+        >
+          <img src="../assets/icons/play-circle.svg" alt="Custom Image 2" />
+          <p>Tulisan tooltip 2</p>
+        </div>
+        <div
+          id="tooltip3"
+          class="tooltip rounded-lg justify-center items-center hidden"
+        >
+          <img src="../assets/icons/play-circle.svg" alt="Custom Image 3" />
+          <p>Tulisan tooltip 3</p>
+        </div>
+
+        <!-- props -->
+        <img
+          id="props-head-1"
+          src="../assets/props/props-head-1.svg"
+          class="absolute hidden lg:flex -left-20 top-52 hover:animate-pulse"
+          alt=""
+        />
+        <img
+          id="props-head-2"
+          src="../assets/props/props-head-2.svg"
+          class="absolute hidden lg:flex -right-20 -bottom-32 hover:animate-pulse"
+          alt=""
+        />
+      </div>
+
+      <!-- modal -->
+      <div
+        role="dialog"
+        id="modal-example"
+        aria-hidden="false"
+        style="display: flex"
+        class="modal fixed top-0 left-0 z-50 w-screen h-screen bg-black/30 flex items-center flex-col justify-center p-6 fade"
+        tabindex="-1"
+      >
+        <div
+          class="absolute top-0 left-0 z-[0] w-full h-full"
+          tabindex="-1"
+        ></div>
+
+        <article
+          class="modal-content flex flex-col relative m-0 rounded-md bg-white sm:my-16 min-w-[95vw] min-h-[95vh] max-h-[100vh] overflow-y-scroll md:overflow-y-hidden"
+          style="margin-block: 0"
+          aria-labelledby="modal-title"
+          aria-describedby="modal-body"
+        >
+          <header class="flex p-4 items-center justify-between">
+            <h2 class="m-0 text-xl font-medium max-w-[calc(100%_-_3rem)]"></h2>
+            <button
+              type="button"
+              class="flex items-center justify-center w-8 h-8 rounded-full bg-transparent transition-colors duration-300 hover:bg-black/10"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="--size: 32rem"
+              >
+                <line
+                  x1="18"
+                  y1="6"
+                  x2="6"
+                  y2="18"
+                  style="--size: 32rem"
+                ></line>
+                <line
+                  x1="6"
+                  y1="6"
+                  x2="18"
+                  y2="18"
+                  style="--size: 32rem"
+                ></line>
+              </svg>
+            </button>
+          </header>
+          <main
+            class="relative flex-[1_1_auto] p-4 flex flex-col md:flex-row items-center md:items-start"
+            style="--size: 32rem"
+          >
+            <div
+              class="w-full md:w-3/4 flex flex-wrap flex-col md:flex-row justify-between items-center md:items-start gap-5"
+            >
+              <img
+                id="preview-img"
+                class="w-full md:w-1/2 object-contain max-h-[70vh] rounded-xl"
+                src="../assets/images/foto-1.png"
+                alt=""
+              />
+              <video
+                id="preview-video"
+                class="max-w-full md:max-w-[47vw] max-h-[80vh] object-contain rounded-xl md:basis-3/4"
+                controls
+                style="display: none"
+              ></video>
+              <div class="flex flex-col flex-1">
+                <h2 id="title-preview" class="text-3xl font-bold">
+                  Omah Nalar!
+                </h2>
+                <p id="description-preview"></p>
+              </div>
+            </div>
+            <div
+              class="max-w-md gap-4 max-h-[72vh] overflow-y-scroll justify-center"
+              id="media-container"
+            >
+              <div
+                class="grid grid-cols-3 md:grid-cols-3 gap-4 basis-1/3 w-full p-6"
+              ></div>
+            </div>
+          </main>
+          <footer
+            class="flex flex-shrink-0 flex-wrap items-center justify-end flex-row p-4 gap-1"
+            style="--size: 32rem"
+          >
+            <button
+              type="button"
+              class="flex items-center justify-center px-4 font-medium bg-gray-200 text-black h-9 rounded-md rounded md hover:bg-gray-300 transition-all duration-300"
+              data-dismiss="modal"
+            >
+              <span class="flex items-center justify-center space-x-2"
+                >Close</span
+              >
+            </button>
+          </footer>
+        </article>
+      </div>
+    </div>
+
+    <div
+      id="profil"
+      class="w-full flex flex-col lg:flex-row px-6 xl:px-40 py-4 md:py-10 justify-between gap-8 items-center"
+    >
+      <div class="basis-2/3">
+        <h1
+          class="uppercase font-semibold text-pink-500 text-sm lg:text-xl tracking-widest"
+        >
+          Profil
+        </h1>
+        <h1 id="title" class="text-xl lg:text-4xl font-bold fade-up">
+          Profil tentang Omah Nalar
+        </h1>
+        <p
+          id="description"
+          class="my-1 text-sm lg:text-base md:my-3 fade-up"
+        ></p>
+      </div>
+
+      <div class="container mx-auto md:py-12 w-full lg:w-6/12 flex flex-col">
+        <div class="slider-container overflow-visible p-6">
+          <div class="slider-wrapper gap-6" id="sliderWrapper">
+            <!-- Isi dari slider -->
+            <div
+              class="slide min-w-72 lg:min-w-80 bg-white flex flex-col justify-center items-center drop-shadow-xl px-8 py-12 rounded-3xl gap-5 opacity-100 active transform scale-100 transition-transform duration-500"
+            >
+              <img
+                class="w-16 mx-auto"
+                src="../assets/profil/profil-1.png"
+                alt=""
+              />
+              <div class="text-center">
+                <h1 class="text-3xl font-bold">Profil Omah Nalar</h1>
+                <p>
+                  <!-- Ide Omah Nalar mulai muncul sejak tahun 2021, namun baru dapat
+                terbentuk dan masih dalam proses pengembangan mulai tahun
+                2023. -->
+                </p>
+              </div>
+            </div>
+            <!-- Tambahkan card lainnya di sini sesuai kebutuhan -->
+            <div
+              class="slide min-w-72 lg:min-w-80 bg-white drop-shadow-xl px-8 py-12 rounded-3xl gap-5 opacity-100 active transform scale-100 transition-transform duration-500"
+            >
+              <img
+                class="w-16 mx-auto"
+                src="../assets/profil/profil-1.png"
+                alt=""
+              />
+              <div class="text-center">
+                <h1 class="text-2xl font-bold">Sejarah</h1>
+                <p class="hidden lg:inline-block">
+                  Ide Omah Nalar mulai muncul sejak tahun 2021, namun baru dapat
+                  terbentuk dan masih dalam proses pengembangan mulai tahun
+                  2023.
+                </p>
+              </div>
+            </div>
+            <div
+              class="slide min-w-72 lg:min-w-80 bg-white drop-shadow-xl px-8 py-12 rounded-3xl gap-5 opacity-100 active transform scale-100 transition-transform duration-500"
+            >
+              <img
+                class="w-16 mx-auto"
+                src="../assets/profil/profil-1.png"
+                alt=""
+              />
+              <div class="text-center">
+                <h1 class="text-2xl font-bold">Tujuan</h1>
+                <p class="hidden lg:inline-block">
+                  Omah Nalar melihat dengan mengasah nalar berpotensi
+                  menummbuhsuburkan critical thinking.
+                </p>
+              </div>
+            </div>
+            <div
+              class="slide min-w-72 lg:min-w-80 bg-white drop-shadow-xl px-8 py-12 rounded-3xl gap-5 opacity-100 active transform scale-100 transition-transform duration-500"
+            >
+              <img
+                class="w-16 mx-auto"
+                src="../assets/profil/profil-1.png"
+                alt=""
+              />
+              <div class="text-center">
+                <h1 class="text-2xl font-bold">Strategi</h1>
+                <p class="hidden lg:inline-block">
+                  Omah Nalar menggunakan pendekatan dengan strategi "jemput
+                  bola" dengan penerapan metode berbasis research dimana tim
+                  akan turun ke lapangan untuk mencari sasaran.
+                </p>
+              </div>
+            </div>
+            <div
+              class="slide min-w-72 lg:min-w-80 bg-white drop-shadow-xl px-8 py-12 rounded-3xl gap-5 opacity-100 active transform scale-100 transition-transform duration-500"
+            >
+              <img
+                class="w-16 mx-auto"
+                src="../assets/profil/profil-1.png"
+                alt=""
+              />
+              <div class="text-center">
+                <h1 class="text-2xl font-bold">Media dan Metode</h1>
+                <p class="hidden lg:inline-block">
+                  Dalam praktiknya, Omah Nalar menerapkan berbagai media dan
+                  metode sesuai dengan permasalahan dan kebutuhan sasaran.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tombol untuk navigasi -->
+      <div class="flex justify-center mt-4">
+        <button
+          id="btnPrev"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mr-4 hidden"
+        >
+          Prev
+        </button>
+        <button
+          id="btnNext"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 hidden"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+
+    <div
+      id="services"
+      class="w-full lg:h-full flex flex-col md:flex-row md:pt-20 justify-between gap-8 items-center relative"
+    >
+      <div class="relative flex-1 xl:flex-none">
+        <img class="" src="../assets/services/img-1.png" alt="" />
+        <img
+          id="props-service-1"
+          class="absolute hidden-element left-52 top-28 z-[3] hover:animate-pulse hidden xl:inline-block"
+          src="../assets/services/props-1.svg"
+          alt=""
+        />
+        <img
+          id="props-service-2"
+          class="absolute hidden-element left-96 top-7 z-[2] hidden lg:inline-block"
+          src="../assets/services/props-2.svg"
+          alt=""
+        />
+        <img
+          id="props-service-3"
+          class="absolute hidden-element right-0 top-56 z-[2] hidden lg:inline-block"
+          src="../assets/services/props-3.svg"
+          alt=""
+        />
+        <img
+          id="props-service-4"
+          class="absolute hidden-element left-24 top-32 z-[2] hidden lg:inline-block"
+          src="../assets/services/props-4.svg"
+          alt=""
+        />
+      </div>
+      <div
+        class="pr-6 pl-6 lg:pl-0 xl:pr-40 flex flex-col justify-between h-3/4 flex-1"
+      >
+        <div class="flex flex-col text-start w-full">
+          <h1
+            class="uppercase font-semibold text-pink-500 text-base lg:text-xl tracking-widest hidden-element"
+          >
+            Services
+          </h1>
+          <h1 class="text-xl lg:text-4xl font-bold hidden-element">
+            Membantu Memberi Ruang untuk Belajar
+          </h1>
+          <p class="my-3 text-sm lg:text-base text-slate-500 hidden-element">
+            Services yang ada di Omah Nalar
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-5">
+          <div
+            class="md:min-w-36 flex flex-col justify-center items-center p-6 border rounded-2xl flex-1 hidden-element card-services"
+          >
+            <h1 class="text-3xl font-bold text-orange-500">1</h1>
+            <h2>Service 1</h2>
+          </div>
+          <div
+            class="md:min-w-36 flex flex-col justify-center items-center p-6 border rounded-2xl flex-1 hidden-element card-services"
+          >
+            <h1 class="text-3xl font-bold text-orange-500">2</h1>
+            <h2>Service 2</h2>
+          </div>
+          <div
+            class="md:min-w-36 flex flex-col justify-center items-center p-6 border rounded-2xl flex-1 hidden-element card-services"
+          >
+            <h1 class="text-3xl font-bold text-orange-500">3</h1>
+            <h2>Service 3</h2>
+          </div>
+          <div
+            class="md:min-w-36 flex flex-col justify-center items-center p-6 border rounded-2xl flex-1 hidden-element card-services"
+          >
+            <h1 class="text-3xl font-bold text-orange-500">4</h1>
+            <h2>Service 4</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="produk"
+      class="w-full h-full flex flex-col p-6 lg:px-40 pt-20 justify-center gap-8 items-center"
+    >
+      <div class="flex flex-col text-start w-full">
+        <h1
+          class="uppercase font-semibold text-pink-500 text-xl tracking-widest"
+        >
+          Produk
+        </h1>
+        <h1 class="text-4xl font-bold">Produk Omah Nalar</h1>
+      </div>
+      <div class="my-5 flex gap-1 md:gap-5">
+        <div
+          class="card flex-1 lg:w-72 bg-white drop-shadow-xl rounded-lg gap-2 opacity-100 active transform scale-100 transition-transform duration-500 overflow-hidden"
+        >
+          <img
+            class="w-full mx-auto"
+            src="../assets/produk/produk-1.png"
+            alt=""
+          />
+          <div class="px-2 lg:px-5 py-3">
+            <h1 class="text-sm lg:text-2xl font-bold">Akhirnya Aku Tahu</h1>
+            <h1
+              class="text-sm lg:text-base hidden lg:flex font-normal my-2 text-slate-500"
+            >
+              Media Pembelajaran
+            </h1>
+            <div class="flex flex-col mt-2">
+              <p class="text-sm lg:text-lg font-semibold text-own-pink">
+                Rp. 20.000
+              </p>
+              <button
+                class="bg-primary text-white py-2 w-full rounded-lg text-xs lg:text-base my-2"
+              >
+                Beli <span class="hidden md:inline-block">Sekarang</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card flex-1 lg:w-72 bg-white drop-shadow-xl rounded-lg gap-2 opacity-100 active transform scale-100 transition-transform duration-500 overflow-hidden"
+        >
+          <img
+            class="w-full mx-auto"
+            src="../assets/produk/produk-1.png"
+            alt=""
+          />
+          <div class="px-2 lg:px-5 py-3">
+            <h1 class="text-sm lg:text-2xl font-bold">Akhirnya Aku Tahu</h1>
+            <h1
+              class="text-sm lg:text-base hidden lg:flex font-normal my-2 text-slate-500"
+            >
+              Media Pembelajaran
+            </h1>
+            <div class="flex flex-col mt-2">
+              <p class="text-sm lg:text-lg font-semibold text-own-pink">
+                Rp. 20.000
+              </p>
+              <button
+                class="bg-primary text-white py-2 w-full rounded-lg text-xs lg:text-base my-2"
+              >
+                Beli <span class="hidden md:inline-block">Sekarang</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card flex-1 lg:w-72 bg-white drop-shadow-xl rounded-lg gap-2 opacity-100 active transform scale-100 transition-transform duration-500 overflow-hidden"
+        >
+          <img
+            class="w-full mx-auto"
+            src="../assets/produk/produk-1.png"
+            alt=""
+          />
+          <div class="px-2 lg:px-5 py-3">
+            <h1 class="text-sm lg:text-2xl font-bold">Akhirnya Aku Tahu</h1>
+            <h1
+              class="text-sm lg:text-base hidden lg:flex font-normal my-2 text-slate-500"
+            >
+              Media Pembelajaran
+            </h1>
+            <div class="flex flex-col mt-2">
+              <p class="text-sm lg:text-lg font-semibold text-own-pink">
+                Rp. 20.000
+              </p>
+              <button
+                class="bg-primary text-white py-2 w-full rounded-lg text-xs lg:text-base my-2"
+              >
+                Beli <span class="hidden md:inline-block">Sekarang</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="w-full flex flex-col xl:px-40 py-20 justify-center gap-8 items-center relative bg-[url('../assets/testi/bg2.svg')] bg-cover bg-no-repeat"
+    >
+      <div class="flex flex-col text-center w-full">
+        <h1
+          class="uppercase font-semibold text-pink-500 text-sm lg:text-xl tracking-widest"
+        >
+          Testimoni
+        </h1>
+        <h1 class="text-lg lg:text-4xl font-bold">
+          Testimoni Produk Omah Nalar
+        </h1>
+      </div>
+      <div class="flex flex-wrap justify-center gap-8">
+        <div
+          class="card w-72 bg-white drop-shadow-2xl px-8 py-8 rounded-3xl gap-5 opacity-100 active transform scale-100 transition-transform duration-500"
+        >
+          <img
+            class="w-16 mx-auto mb-7"
+            src="../assets/testi/profile.png"
+            alt=""
+          />
+          <div class="text-center">
+            <h1 class="text-2xl font-bold">Sejarah</h1>
+            <p>
+              Ide Omah Nalar mulai muncul sejak tahun 2021, namun baru dapat
+              terbentuk dan masih dalam proses pengembangan mulai tahun 2023.
+            </p>
+          </div>
+        </div>
+        <div
+          class="card w-72 bg-white drop-shadow-2xl px-8 py-8 rounded-3xl gap-5 opacity-100 active transform scale-100 transition-transform duration-500"
+        >
+          <img
+            class="w-16 mx-auto mb-7"
+            src="../assets/testi/profile.png"
+            alt=""
+          />
+          <div class="text-center">
+            <h1 class="text-2xl font-bold">Sejarah</h1>
+            <p>
+              Ide Omah Nalar mulai muncul sejak tahun 2021, namun baru dapat
+              terbentuk dan masih dalam proses pengembangan mulai tahun 2023.
+            </p>
+          </div>
+        </div>
+        <div
+          class="card w-72 bg-white drop-shadow-2xl px-8 py-8 rounded-3xl gap-5 opacity-100 active transform scale-100 transition-transform duration-500"
+        >
+          <img
+            class="w-16 mx-auto mb-7"
+            src="../assets/testi/profile.png"
+            alt=""
+          />
+          <div class="text-center">
+            <h1 class="text-2xl font-bold">Sejarah</h1>
+            <p>
+              Ide Omah Nalar mulai muncul sejak tahun 2021, namun baru dapat
+              terbentuk dan masih dalam proses pengembangan mulai tahun 2023.
+            </p>
+          </div>
+        </div>
+        <div
+          class="card w-72 bg-white drop-shadow-2xl px-8 py-8 rounded-3xl gap-5 opacity-100 active transform scale-100 transition-transform duration-500"
+        >
+          <img
+            class="w-16 mx-auto mb-7"
+            src="../assets/testi/profile.png"
+            alt=""
+          />
+          <div class="text-center">
+            <h1 class="text-2xl font-bold">Sejarah</h1>
+            <p>
+              Ide Omah Nalar mulai muncul sejak tahun 2021, namun baru dapat
+              terbentuk dan masih dalam proses pengembangan mulai tahun 2023.
+            </p>
+          </div>
+        </div>
+        <div
+          class="card w-72 bg-white drop-shadow-2xl px-8 py-8 rounded-3xl gap-5 opacity-100 active transform scale-100 transition-transform duration-500"
+        >
+          <img
+            class="w-16 mx-auto mb-7"
+            src="../assets/testi/profile.png"
+            alt=""
+          />
+          <div class="text-center">
+            <h1 class="text-2xl font-bold">Sejarah</h1>
+            <p>
+              Ide Omah Nalar mulai muncul sejak tahun 2021, namun baru dapat
+              terbentuk dan masih dalam proses pengembangan mulai tahun 2023.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="contact"
+      class="w-full flex flex-col px-6 xl:px-40 py-20 justify-center gap-8 items-center relative"
+    >
+      <div class="flex flex-col text-center w-full">
+        <h1
+          class="uppercase font-semibold text-pink-500 text-sm lg:text-xl tracking-widest"
+        >
+          Contact us
+        </h1>
+        <h1 class="text-lg lg:text-4xl font-bold xl:px-48">
+          Jadikan Omah Nalar sebagai Partner Belajarmu Sekarang!
+        </h1>
+      </div>
+      <div class="flex w-full lg:w-1/2 justify-center">
+        <form
+          action=""
+          class="w-full relative flex flex-col lg:flex-row justify-center gap-5"
+        >
+          <label
+            for="email"
+            class="absolute top-1/4 -left-14 hidden lg:inline-block"
+            ><img src="../assets/email-icons.svg" class="w-6" alt=""
+          /></label>
+          <input
+            type="email"
+            name="email"
+            placeholder="johnndoe@example.com"
+            class="flex-none border rounded-full pl-3 lg:pl-14 py-3 w-full text-xs md:text-base"
+          />
+          <button
+            class="bg-primary px-6 py-3 min-w-32 rounded-full text-white text-sm"
+          >
+            Hubungi
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div id="contact" class="flex items-end w-full bg-white">
+      <footer class="w-full text-gray-700 bg-gray-100 body-font">
+        <div
+          class="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap"
+        >
+          <div
+            class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left"
+          >
+            <a
+              class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start"
+            >
+              <img src="../assets/logo/logo.svg" alt="" />
+              <p class="text-xl font-semibold">Omah Nalar</p>
+            </a>
+            <p class="mt-2 text-base text-gray-500">
+              Memberi Ruang untuk Belajar Demi Nalar yang Mengakar
+            </p>
+            <div class="mt-4">
+              <span
+                class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start"
+              >
+                <a class="text-gray-500 cursor-pointer hover:text-gray-700">
+                  <svg
+                    fill="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700"
+                >
+                  <svg
+                    fill="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect
+                      width="20"
+                      height="20"
+                      x="2"
+                      y="2"
+                      rx="5"
+                      ry="5"
+                    ></rect>
+                    <path
+                      d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700"
+                >
+                  <svg
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="0"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="none"
+                      d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                    ></path>
+                    <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left"
+          >
+            <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+              <h2
+                class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font"
+              >
+                About
+              </h2>
+              <nav class="mb-10 list-none">
+                <li class="mt-3">
+                  <a class="text-gray-500 cursor-pointer hover:text-gray-900"
+                    >Company</a
+                  >
+                </li>
+                <li class="mt-3">
+                  <a class="text-gray-500 cursor-pointer hover:text-gray-900"
+                    >Careers</a
+                  >
+                </li>
+                <li class="mt-3">
+                  <a class="text-gray-500 cursor-pointer hover:text-gray-900"
+                    >Blog</a
+                  >
+                </li>
+              </nav>
+            </div>
+            <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+              <h2
+                class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font"
+              >
+                Sitemap
+              </h2>
+              <nav class="mb-10 list-none">
+                <li class="mt-3">
+                  <a class="text-gray-500 cursor-pointer hover:text-gray-900"
+                    >Beranda</a
+                  >
+                </li>
+                <li class="mt-3">
+                  <a class="text-gray-500 cursor-pointer hover:text-gray-900"
+                    >Profil</a
+                  >
+                </li>
+                <li class="mt-3">
+                  <a class="text-gray-500 cursor-pointer hover:text-gray-900"
+                    >Produk</a
+                  >
+                </li>
+                <li class="mt-3">
+                  <a class="text-gray-500 cursor-pointer hover:text-gray-900"
+                    >Services</a
+                  >
+                </li>
+                <li class="mt-3">
+                  <a class="text-gray-500 cursor-pointer hover:text-gray-900"
+                    >Artikel</a
+                  >
+                </li>
+                <li class="mt-3">
+                  <a class="text-gray-500 cursor-pointer hover:text-gray-900"
+                    >Contact</a
+                  >
+                </li>
+              </nav>
+            </div>
+            <div class="w-full px-4 lg:w-1/4 md:w-1/2 hidden">
+              <h2
+                class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font"
+              >
+                Platform
+              </h2>
+              <nav class="mb-10 list-none">
+                <li class="mt-3">
+                  <a class="text-gray-500 cursor-pointer hover:text-gray-900"
+                    >Terms &amp; Privacy</a
+                  >
+                </li>
+                <li class="mt-3">
+                  <a class="text-gray-500 cursor-pointer hover:text-gray-900"
+                    >Pricing</a
+                  >
+                </li>
+                <li class="mt-3">
+                  <a class="text-gray-500 cursor-pointer hover:text-gray-900"
+                    >FAQ</a
+                  >
+                </li>
+              </nav>
+            </div>
+            <div class="w-full px-4 lg:w-1/4 md:w-1/2 hidden">
+              <h2
+                class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font"
+              >
+                Contact
+              </h2>
+              <nav class="mb-10 list-none">
+                <li class="mt-3">
+                  <a class="text-gray-500 cursor-pointer hover:text-gray-900"
+                    >Send a Message</a
+                  >
+                </li>
+                <li class="mt-3">
+                  <a class="text-gray-500 cursor-pointer hover:text-gray-900"
+                    >Request a Quote</a
+                  >
+                </li>
+                <li class="mt-3">
+                  <a class="text-gray-500 cursor-pointer hover:text-gray-900"
+                    >+123-456-7890</a
+                  >
+                </li>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-300">
+          <div class="container px-5 py-4 mx-auto">
+            <p class="text-sm text-gray-700 capitalize xl:text-center">
+              © 2024 Made by ahmakbar
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sliderWrapper = document.getElementById("sliderWrapper");
+        const slides = document.querySelectorAll(".slide");
+        let currentIndex = 0;
+        const slideWidth = 320; // Sesuaikan dengan lebar card
+        const totalSlides = slides.length;
+        let intervalId = null;
+        let swipePerformed = false; // Tambahkan variabel swipePerformed
+
+        // Mendapatkan data dari file JSON
+        fetch("data.json")
+          .then((response) => response.json())
+          .then((data) => {
+            // Fungsi untuk menampilkan slide berdasarkan data dari JSON
+            function showSlide(index) {
+              if (index < 0 || index >= totalSlides) return;
+              currentIndex = index;
+              const translateValue = -currentIndex * slideWidth;
+              sliderWrapper.style.transform = `translateX(${translateValue}px)`;
+
+              // Mengubah teks pada elemen #title dan menambahkan teks pada elemen #description dengan animasi fade up
+              const title = document.getElementById("title");
+              const description = document.getElementById("description");
+
+              // Tambahkan kelas .fade-up untuk animasi fade up
+              title.classList.remove("active");
+              description.classList.remove("active");
+              setTimeout(() => {
+                title.innerText = data[currentIndex].title;
+                description.innerText = data[currentIndex].description;
+                // Aktifkan kelas .active untuk menerapkan animasi fade up
+                title.classList.add("active");
+                description.classList.add("active");
+              }, 300); // Waktu delay untuk memastikan transisi selesai sebelum animasi dimulai
+            }
+
+            // Panggil fungsi showSlide dengan indeks awal
+            showSlide(currentIndex);
+
+            // Fungsi untuk menggeser slide ke kanan
+            function nextSlide() {
+              const nextIndex = currentIndex + 1;
+              if (nextIndex < totalSlides) {
+                showSlide(nextIndex);
+              } else {
+                showSlide(0); // Kembali ke slide pertama setelah mencapai akhir
+              }
+              swipePerformed = true; // Set swipePerformed menjadi true setelah swipe
+            }
+
+            // Fungsi untuk menggeser slide ke kiri
+            function prevSlide() {
+              const prevIndex = currentIndex - 1;
+              if (prevIndex >= 0) {
+                showSlide(prevIndex);
+              } else {
+                showSlide(totalSlides - 1); // Kembali ke slide terakhir setelah mencapai awal
+              }
+              swipePerformed = true; // Set swipePerformed menjadi true setelah swipe
+            }
+
+            // Tambahkan event listener untuk tombol next dan prev
+            document.getElementById("btnNext").addEventListener("click", () => {
+              clearInterval(intervalId); // Hentikan interval jika ada
+              nextSlide();
+            });
+            document.getElementById("btnPrev").addEventListener("click", () => {
+              clearInterval(intervalId); // Hentikan interval jika ada
+              prevSlide();
+            });
+
+            // Tambahkan event listener untuk setiap card
+            slides.forEach((slide, index) => {
+              slide.addEventListener("click", () => {
+                clearInterval(intervalId); // Hentikan interval jika ada
+                showSlide(index);
+              });
+
+              slide.addEventListener("mouseenter", (event) => {
+                clearInterval(intervalId); // Hentikan interval jika ada
+                intervalId = setInterval(() => {
+                  nextSlide();
+                }, 4000); // Interval perpindahan slide: 4 detik
+
+                // Dapatkan judul card dari data JSON sesuai dengan index slide
+                const cardTitle = data[index].title;
+
+                // Buat elemen tooltip dengan teks gabungan
+                const tooltip = document.createElement("div");
+                tooltip.classList.add("tooltip-profile");
+                tooltip.innerText = `Klik untuk lihat "${cardTitle}"`;
+
+                // Tentukan posisi tooltip
+                const mouseX = event.clientX;
+                const mouseY = event.clientY;
+
+                tooltip.style.left = `${mouseX}px`;
+                tooltip.style.top = `${mouseY + 10}px`; // Jarak tooltip dari mouse
+
+                // Tambahkan tooltip ke dalam dokumen
+                document.body.appendChild(tooltip);
+
+                // Tambahkan kelas .active setelah delay 1 detik
+                setTimeout(() => {
+                  tooltip.classList.add("active");
+                }, 100);
+
+                console.log("Tooltip added to document"); // Cek apakah tooltip berhasil ditambahkan
+              });
+
+              slide.addEventListener("mouseleave", () => {
+                clearInterval(intervalId); // Hentikan interval saat mouse meninggalkan card
+                const tooltip = document.querySelector(".tooltip-profile");
+                if (tooltip) {
+                  tooltip.remove(); // Hapus tooltip dari dokumen
+                }
+              });
+            });
+
+            // Event listener untuk mengikuti posisi mouse saat hover card
+            document.addEventListener("mousemove", (event) => {
+              const tooltip = document.querySelector(".tooltip-profile");
+              if (tooltip) {
+                const mouseX = event.clientX;
+                const mouseY = event.clientY;
+
+                tooltip.style.left = `${mouseX}px`;
+                tooltip.style.top = `${mouseY + 10}px`; // Jarak tooltip dari mouse
+              }
+            });
+
+            // Event listener untuk gesture drag pada viewport <= 425px
+            if (window.innerWidth <= 425) {
+              let touchStartX = 0;
+
+              sliderWrapper.addEventListener("touchstart", (e) => {
+                touchStartX = e.touches[0].clientX;
+                swipePerformed = false; // Set swipePerformed menjadi false pada touchstart
+              });
+
+              sliderWrapper.addEventListener("touchmove", (e) => {
+                if (!swipePerformed) {
+                  // Hanya izinkan swipe jika belum ada swipe sebelumnya
+                  const touchEndX = e.touches[0].clientX;
+                  const touchDiff = touchEndX - touchStartX;
+
+                  const minSwipeDistance = 50;
+
+                  if (touchDiff > minSwipeDistance) {
+                    prevSlide(); // Swipe ke kiri
+                  } else if (touchDiff < -minSwipeDistance) {
+                    nextSlide(); // Swipe ke kanan
+                  }
+                }
+              });
+            }
+          })
+          .catch((error) => {
+            console.error("Error fetching data:", error);
+          });
+      });
+    </script>
+
+    <script>
+      // Mengambil referensi ke elemen gambar
+      const head1 = document.getElementById("props-head-1");
+      const head2 = document.getElementById("props-head-2");
+      const service2 = document.getElementById("props-service-2");
+      const service3 = document.getElementById("props-service-3");
+      const service4 = document.getElementById("props-service-4");
+
+      // Mendengarkan pergerakan mouse di halaman
+      document.addEventListener("mousemove", (e) => {
+        // Menghitung pergeseran relatif terhadap tengah halaman
+        const offsetX = e.clientX - window.innerWidth / 2;
+        const offsetY = e.clientY - window.innerHeight / 2;
+
+        // Menambahkan delay menggunakan setTimeout
+        setTimeout(() => {
+          // Menggerakkan gambar berdasarkan pergeseran mouse dengan efek smooth
+          head1.style.transition = "transform 0.5s ease";
+          head1.style.transform = `translate(${offsetX / 50}px, ${
+            offsetY / 10
+          }px)`;
+
+          head2.style.transition = "transform 0.5s ease";
+          head2.style.transform = `translate(${-offsetX / 42}px, ${
+            -offsetY / 10
+          }px)`;
+
+          service2.style.transition = "transform 0.5s ease";
+          service2.style.transform = `translate(${offsetX / 30}px, ${
+            offsetY / 10
+          }px)`;
+          service3.style.transition = "transform 0.5s ease";
+          service3.style.transform = `translate(${-offsetX / 62}px, ${
+            -offsetY / 10
+          }px)`;
+          service4.style.transition = "transform 0.5s ease";
+          service4.style.transform = `translate(${offsetX / 100}px, ${
+            -offsetY / 10
+          }px)`;
+        }, 100); // Delay 100ms sebelum pergerakan dimulai
+      });
+    </script>
+    <script>
+      function showTooltip(id) {
+        const tooltip = document.getElementById(id);
+        if (tooltip) {
+          tooltip.style.display = "flex"; // Tampilkan tooltip
+          setTimeout(() => (tooltip.style.opacity = "1"), 10); // Atur opasitas ke 1 setelah sedikit delay
+          document.addEventListener("mousemove", (event) =>
+            moveTooltip(event, tooltip)
+          );
+        }
+      }
+
+      function hideTooltip(id) {
+        const tooltip = document.getElementById(id);
+        if (tooltip) {
+          tooltip.style.opacity = "0"; // Atur opasitas ke 0
+          setTimeout(() => (tooltip.style.display = "none"), 200); // Sembunyikan tooltip setelah efek transisi selesai
+          document.removeEventListener("mousemove", moveTooltip);
+        }
+      }
+
+      function moveTooltip(event, tooltip) {
+        tooltip.style.left = `${event.clientX + 10}px`; // Atur posisi X tooltip dengan margin tambahan 10px dari cursor
+        tooltip.style.top = `${event.clientY + 10}px`; // Atur posisi Y tooltip dengan margin tambahan 10px dari cursor
+      }
+    </script>
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show-element");
+          } else {
+            entry.target.classList.remove("show-element");
+          }
+        });
+      });
+
+      const hiddenElements = document.querySelectorAll(".hidden-element");
+      hiddenElements.forEach((element) => observer.observe(element));
+    </script>
+    <script>
+      const buttonClose = document.querySelectorAll('[data-dismiss="modal"]');
+      const modal = document.querySelector(".modal");
+      const trigger = document.querySelector('[data-toggle="modal"]');
+
+      // Static backdrop
+
+      function getStaticClass(modal) {
+        modal.classList.add("astroui-modal-static");
+        document.body.style.overflow = "hidden";
+        document.body.classList.add("astroui-modal-open");
+        setTimeout(() => {
+          modal.classList.remove("astroui-modal-static");
+        }, 100);
+      }
+
+      // Show modal
+
+      function showModal(modal) {
+        modal.style.display = "flex";
+        setTimeout(() => {
+          modal.classList.add("show");
+        }, 100);
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        document.body.classList.add("astroui-modal-open");
+      }
+
+      // Remove modal
+
+      function dismissModal(modal) {
+        modal.classList.remove("show");
+        setTimeout(() => {
+          modal.style.display = "none";
+        }, 200);
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+        document.body.classList.remove("astroui-modal-open");
+      }
+
+      dismissModal(modal);
+
+      //
+      // Function on dismissing modal by button close
+
+      const getDismiss = (buttonClose, modal) => {
+        buttonClose.addEventListener("click", () => {
+          dismissModal(modal);
+        });
+      };
+
+      buttonClose.forEach((buttonClose) => {
+        getDismiss(buttonClose, modal);
+      });
+
+      // Open modal
+
+      trigger.addEventListener("click", () => {
+        showModal(modal);
+      });
+
+      // Close modal with press escape
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && modal.classList.contains("show")) {
+          dismissModal(modal);
+        }
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const mediaContainer = document.getElementById("media-container");
+        const previewImg = document.getElementById("preview-img");
+        const previewVideo = document.getElementById("preview-video");
+        const titlePreview = document.getElementById("title-preview");
+        const descriptionPreview = document.getElementById(
+          "description-preview"
+        );
+
+        // Fetch the JSON data
+        fetch("media.json")
+          .then((response) => response.json())
+          .then((data) => {
+            const mediaItems = data.mediaItems;
+
+            // Loop through the media items and create elements dynamically
+            mediaItems.forEach((mediaItem) => {
+              const { type, src, title, description } = mediaItem;
+
+              const itemContainer = document.createElement("div");
+              itemContainer.classList.add(
+                "media-item",
+                "max-w-24",
+                "aspect-square",
+                "rounded-lg",
+                "overflow-hidden",
+                "flex-1",
+                "object-cover",
+                "relative",
+                "cursor-pointer",
+                "bg-gray-900",
+                "hover:bg-gray-800",
+                "flex",
+                "items-center",
+                "justify-center",
+                "flex-col"
+              );
+
+              if (type === "video") {
+                // Create video element
+                const videoObj = document.createElement("video");
+                videoObj.src = src;
+                videoObj.alt = "";
+                videoObj.preload = "metadata"; // Preload video metadata
+                videoObj.classList.add("w-full", "h-full");
+
+                // Create play icon
+                const playIcon = document.createElement("i");
+                playIcon.classList.add(
+                  "fas",
+                  "fa-play",
+                  "text-white",
+                  "absolute",
+                  "z-10",
+                  "opacity-75"
+                );
+
+                // Append play icon to video wrapper
+                itemContainer.appendChild(playIcon);
+
+                // Append video element to video wrapper
+                itemContainer.appendChild(videoObj);
+              } else {
+                // Create image element
+                const imageObj = document.createElement("img");
+                imageObj.src = src;
+                imageObj.alt = "";
+                imageObj.classList.add("w-full", "h-full");
+
+                // Append the image object to the media container
+                itemContainer.appendChild(imageObj);
+              }
+
+              // Add click event listener to each media object
+              itemContainer.addEventListener("click", () => {
+                handleMediaClick(mediaItem);
+              });
+
+              // Append the item container to the media container
+              mediaContainer.querySelector(".grid").appendChild(itemContainer);
+            });
+          })
+          .catch((error) => {
+            console.error("Error fetching media data:", error);
+          });
+
+        // Function to handle click on media objects
+        function handleMediaClick(mediaItem) {
+          const { type, src, title, description } = mediaItem;
+
+          titlePreview.textContent = title;
+          descriptionPreview.textContent = description;
+
+          if (type === "video") {
+            fadeIn(previewVideo); // Fade in the video preview
+            fadeOut(previewImg); // Fade out the image preview
+            previewImg.src = ""; // Clear the image source
+            previewVideo.src = src; // Set the video source
+            previewVideo.play(); // Play the video
+          } else {
+            fadeIn(previewImg); // Fade in the image preview
+            fadeOut(previewVideo); // Fade out the video preview
+            previewVideo.pause(); // Pause the video if playing
+            previewImg.src = src; // Set the image source
+          }
+        }
+
+        // Function to fade in an element
+        function fadeIn(element) {
+          element.style.opacity = 0;
+          element.style.display = "block";
+          let opacity = 0;
+          const intervalId = setInterval(() => {
+            if (opacity < 1) {
+              opacity += 0.1;
+              element.style.opacity = opacity;
+            } else {
+              clearInterval(intervalId);
+            }
+          }, 50); // Adjust the interval for smoother animation
+        }
+
+        // Function to fade out an element
+        function fadeOut(element) {
+          let opacity = 1;
+          const intervalId = setInterval(() => {
+            if (opacity > 0) {
+              opacity -= 0.1;
+              element.style.opacity = opacity;
+            } else {
+              element.style.display = "none";
+              clearInterval(intervalId);
+            }
+          }, 50); // Adjust the interval for smoother animation
+        }
+      });
+    </script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const divs = document.querySelectorAll("div[id]");
+        const navLinks = document.querySelectorAll("nav a");
+        const lenis = new Lenis();
+
+        function setActiveNav(id) {
+          navLinks.forEach((link) => {
+            const href = link.getAttribute("href").substring(1);
+            const parentLi = link.parentElement;
+            parentLi.classList.remove("font-bold");
+            if (href === id) {
+              parentLi.classList.add("font-bold");
+            }
+          });
+        }
+
+        const observerOptions = {
+          rootMargin: "-50% 0px -50% 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            const id = entry.target.getAttribute("id");
+            const targetDiv = document.getElementById(id);
+            const parentLi = document.querySelector(
+              `nav a[href="#${id}"]`
+            ).parentElement;
+
+            if (
+              entry.isIntersecting ||
+              (entry.boundingClientRect.top >= 0 &&
+                entry.boundingClientRect.bottom <= window.innerHeight)
+            ) {
+              parentLi.classList.add("font-bold");
+            } else {
+              parentLi.classList.remove("font-bold");
+            }
+          });
+        }, observerOptions);
+
+        divs.forEach((div) => {
+          observer.observe(div);
+        });
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href").substring(1);
+            const targetDiv = document.getElementById(targetId);
+            if (targetDiv) {
+              lenis.scrollTo(targetDiv.offsetTop, 500);
+            }
+          });
+        });
+
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+      });
+    </script>
+  </body>
+</html>
