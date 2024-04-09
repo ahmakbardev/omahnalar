@@ -23,9 +23,6 @@
   max-width: 100px;
 }
 
-/* .tooltip p {
-  margin-top: 5px;
-} */
 
 .slider-container {
   overflow: hidden;
@@ -72,11 +69,6 @@
 .slider-wrapper {
   display: flex;
   transition: transform 0.5s ease;
-}
-
-.slide {
-  /* min-width: 320px; */
-  /* flex: 0 0 auto; */
 }
 
 /* Efek hover */
@@ -191,12 +183,6 @@
   position: absolute;
   cursor: pointer;
   display: none;
-}
-
-.open-menu {
-  /* top: 50%; */
-  /* right: 20px; */
-  /* transform: translateY(-50%); */
 }
 
 .close-menu {
