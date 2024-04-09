@@ -30,9 +30,6 @@ jobs:
             rm output.css
             rm media.json
             rm assets
-            cd source ~/.bash_profile
-            nvm use 18
-            npx tailwindcss -o build.css --minify
             ln -s /home/u376682195/domains/omahnalar.org/public_html/omahnalar/src/* /home/u376682195/domains/omahnalar.org/public_html/
             ln -s /home/u376682195/domains/omahnalar.org/public_html/omahnalar/assets /home/u376682195/domains/omahnalar.org/public_html/
 
