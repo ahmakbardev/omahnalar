@@ -21,6 +21,9 @@ jobs:
           key: ${{ secrets.SERVER_KEY }}
           port: ${{ secrets.SERVER_PORT }}
           script: |
+            cd /home/u376682195/domains/omahnalar.org/public_html/
+            rmdir omahnalar
+            git clone https://github.com/ahmakbardev/omahnalar.git
             cd /home/u376682195/domains/omahnalar.org/public_html/omahnalar/
             git pull origin develop
             cd /home/u376682195/domains/omahnalar.org/public_html/
