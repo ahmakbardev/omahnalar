@@ -30,7 +30,7 @@ jobs:
             rm output.css
             rm media.json
             cd /home/u376682195/domains/omahnalar.org/
-            rmdir assets/
+            rmdir assets
             ln -s /home/u376682195/domains/omahnalar.org/public_html/omahnalar/src/* /home/u376682195/domains/omahnalar.org/public_html/
             ln -s /home/u376682195/domains/omahnalar.org/public_html/omahnalar/assets /home/u376682195/domains/omahnalar.org/public_html/
 
