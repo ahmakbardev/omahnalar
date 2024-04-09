@@ -30,6 +30,8 @@ jobs:
             rm output.css
             rm media.json
             rm assets
+            cd /home/u376682195/domains/omahnalar.org/public_html/omahnalar/
+            npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
             ln -s /home/u376682195/domains/omahnalar.org/public_html/omahnalar/src/* /home/u376682195/domains/omahnalar.org/public_html/
             ln -s /home/u376682195/domains/omahnalar.org/public_html/omahnalar/assets /home/u376682195/domains/omahnalar.org/public_html/
 
