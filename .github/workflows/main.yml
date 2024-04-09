@@ -25,4 +25,4 @@ jobs:
             git clone https://github.com/ahmakbardev/omahnalar.git
             cd /home/u376682195/domains/omahnalar.org/public_html/omahnalar/
             git pull origin develop
-            ln -s /home/u376682195/domains/omahnalar.org/public_html/src/ /home/u376682195/domains/omahnalar.org/public_html
+            ln -s /home/u376682195/domains/omahnalar.org/public_html/omahnalar/src/index.html /home/u376682195/domains/omahnalar.org/public_html/
