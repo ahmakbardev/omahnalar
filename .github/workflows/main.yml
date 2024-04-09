@@ -31,6 +31,7 @@ jobs:
             rm input.css
             rm output.css
             rm media.json
+            rm tailwind.config.js
             rm assets
             ln -s /home/u376682195/domains/omahnalar.org/public_html/omahnalar/tailwind.config.js /home/u376682195/domains/omahnalar.org/public_html/
             ln -s /home/u376682195/domains/omahnalar.org/public_html/omahnalar/src/* /home/u376682195/domains/omahnalar.org/public_html/
