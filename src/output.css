@@ -1153,6 +1153,10 @@ video {
   background-image: url('../assets/testi/bg2.svg');
 }
 
+.bg-\[url\(\'\.\/assets\/testi\/bg2\.svg\'\)\] {
+  background-image: url('./assets/testi/bg2.svg');
+}
+
 .bg-cover {
   background-size: cover;
 }
